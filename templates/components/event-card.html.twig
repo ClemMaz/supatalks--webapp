@@ -1,5 +1,5 @@
 {% for item in events %}
-<div class="p-2 m-3 text-center border rounded-3 col-md-3">
+<div class="p-6 m-3 text-center border rounded-3 col-md-3">
     <h5>{{ item.name }}</h5>
     <p>
         Speakers of this event : <br>
@@ -8,5 +8,6 @@
             {{ speaker.fullName }}
         {% endfor %}
     </p>
+    <button onclick="#" " type="button">Réserver</button>
 </div>
 {% endfor %}
