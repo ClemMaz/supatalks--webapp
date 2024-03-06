@@ -1,14 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Welcome -- SupaTalks
+{% endblock %}
 
 {% block body %}
 
-{#{{ dump(events) }}
-{{ dump(speakers) }}#}
+	{#{{ dump(events) }}
+		{{ dump(speakers) }}#}
 
-
-
+	<div class="m-auto row w-100">
+		{{ include('components/nav.html.twig') }}
+	</div>
 
 	<section class="pt-4 pt-md-11">
 		<div class="container">
@@ -17,7 +19,7 @@
 					class="col-12 col-md-5 col-lg-6 order-md-2">
 
 					<!-- Image -->
-					<img src="http://via.placeholder.com/500x300" alt="http://via.placeholder.com/500x300">
+					<img src="./././assets/img/supa.jpeg" alt="http://via.placeholder.com/500x300">
 				</div>
 				<div
 					class="col-12 col-md-7 col-lg-6 order-md-1 aos-init aos-animate" data-aos="fade-up">
@@ -27,24 +29,24 @@
 						Welcome to
 						<span class="text-primary">{{title}}</span>.
 						<br>
-						Develop anything.
+						Inspire. Create.
 					</h1>
 
 					<!-- Text -->
 					<p class="lead text-center text-md-start text-body-secondary mb-6 mb-lg-8">
-						Build a beautiful, modern website with flexible Bootstrap components built from scratch.
+						Inspiring conferences for creative people in tech world. Learn and progress with passionnate experts and develop your niche.
 					</p>
 
 					<!-- Buttons -->
-					<div class="text-center text-md-start">
-						<a href="overview.html" class="btn btn-primary shadow lift me-1">
-							View all pages
-							<i class="fe fe-arrow-right d-none d-md-inline ms-3"></i>
-						</a>
-						<a href="docs/index.html" class="btn btn-primary-subtle lift">
-							Documentation
-						</a>
-					</div>
+					<!-- <div class="text-center text-md-start">
+																<a href="overview.html" class="btn btn-primary shadow lift me-1">
+																	View all pages
+																	<i class="fe fe-arrow-right d-none d-md-inline ms-3"></i>
+																</a>
+																<a href="docs/index.html" class="btn btn-primary-subtle lift">
+																	Documentation
+																</a>
+															</div>-->
 
 				</div>
 			</div>
@@ -127,7 +129,28 @@
 		<!-- / .container -->
 	</section>
 
+	<section class="video">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-10 col-lg-8 mx-auto">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=TvVwBlwrRRE" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+
+		<section class="form-book">
+		<div class="m-auto row w-100">
+		{{ include('components/book.html.twig') }}
+	</div>
+
 	<div class="m-auto row w-100">
-        {{ include('components/event-card.html.twig') }}
-    </div>
+		{{ include('components/event-card.html.twig') }}
+	</div>
+
+	<div class="m-auto row w-100">
+		{{ include('components/footer.html.twig') }}
+	</div>
 {% endblock %}
